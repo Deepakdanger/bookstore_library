@@ -10,7 +10,7 @@
 ## Live Demo
 
 Click on the link below for accessing the deployed website.
-### [Bookstore](https://flamboyant-euclid-48351d.netlify.app/)</p>
+### [Bookstore](https://youthful-nobel-ac66ea.netlify.app)</p>
 
 
 ## Getting Started
