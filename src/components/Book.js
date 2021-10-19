@@ -2,17 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 function Books({ books }) {
-    const { bookId, title, category } = books;
+  const { bookId, title, category } = books;
   return (
     <div className="displaybook">
       <div className="displaybook_id">
-      {bookId}
+        {bookId}
       </div>
       <div className="displaybook_name">
-      {title}
+        {title}
       </div>
       <div className="displaybook_category">
-      {category}
+        {category}
       </div>
     </div>
   );
