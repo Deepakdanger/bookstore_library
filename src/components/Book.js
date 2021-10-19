@@ -1,21 +1,38 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 
-function Books({ books }) {
+function Book(books) {
   const { bookId, title, category } = books;
   return (
-    <div className="displaybook">
-      <div className="displaybook_id">
+    <tr className="displaybook">
+      <td className="displaybook_id">
         {bookId}
-      </div>
-      <div className="displaybook_name">
+      </td>
+      <td className="displaybook_name">
         {title}
-      </div>
-      <div className="displaybook_category">
+      </td>
+      <td className="displaybook_category">
         {category}
-      </div>
-    </div>
+      </td>
+    </tr>
   );
 }
 
-export default Books;
+Book.propTypes = {
+  books: PropTypes.shape({
+    bookId: PropTypes.string,
+    title: PropTypes.string,
+    category: PropTypes.string,
+  }),
+
+};
+
+Book.defaultProps = {
+  books: PropTypes.shape({
+    bookId: '1',
+    title: 'fhfh',
+    category: 'si-fi',
+  }),
+};
+
+export default Book;

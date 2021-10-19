@@ -2,8 +2,14 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Book from '../components/Book';
 
+const book = {
+  bookId: Math.random(),
+  title: 'far from here',
+  category: 'Kids',
+};
+
 function BooksList() {
-  const BookList_all = books.map((book) => (<Book key={`book-${book.bookId}`} book={book} />));
+  const printBook = Book(book);
   return (
     <div className="booklist">
       <table className="booklist-table">
@@ -15,7 +21,7 @@ function BooksList() {
           </tr>
         </thead>
         <tbody>
-          {BookList_all}
+          {printBook}
         </tbody>
       </table>
     </div>

@@ -9,7 +9,7 @@ function BooksForm() {
     { value: 'horror', label: 'Horror' },
     { value: 'kids', label: 'Kids' },
     { value: 'learning', label: 'Learning' },
-    { value: 'sci-fi', label: 'Sci-Fi' }
+    { value: 'sci-fi', label: 'Sci-Fi' },
   ];
   return (
     <div className="booklist">
