@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Select from 'react-select';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { createBookAction } from '../actions';
 
-const BooksForm = () => {
+const BooksForm = ({ createBook }) => {
+  const [state, setState] = useState({ title: '', category: '' });
+
   const options = [
     { value: 'action', label: 'Action' },
     { value: 'biography', label: 'Biography' },
@@ -11,15 +16,42 @@ const BooksForm = () => {
     { value: 'learning', label: 'Learning' },
     { value: 'sci-fi', label: 'Sci-Fi' },
   ];
+
+  const handleNameChange = (e) => {
+    setState((prevState) => ({ state: { ...prevState.state, title: e.target.value } }));
+  };
+
+  const handleCategoryChange = (e) => {
+    setState((prevState) => ({ state: { ...prevState.state, category: e.value } }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    createBook({
+      bookiD: Math.random(),
+      title: state.state.title,
+      category: state.state.category,
+    });
+    setState({ title: '', categoty: '' });
+  };
+
   return (
     <div className="booklist">
-      <form>
-        <input type="text" id="title" name="title" placeholder="Title of the book" />
-        <Select options={options} />
+      <form onSubmit={(e) => handleSubmit(e)}>
+        <input type="text" id="title" value={state.title} onChange={(e) => handleNameChange(e)} />
+        <Select options={options} onChange={(e) => handleCategoryChange(e)} />
         <button type="submit">Submit</button>
       </form>
     </div>
   );
 };
 
-export default BooksForm;
+BooksForm.propTypes = {
+  createBook: PropTypes.func.isRequired,
+};
+
+const mapDispatchToProps = (dispatch) => ({
+  createBook: (book) => dispatch(createBookAction(book)),
+});
+
+export default connect(null, mapDispatchToProps)(BooksForm);

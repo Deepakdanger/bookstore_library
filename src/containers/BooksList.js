@@ -28,6 +28,11 @@ const BooksList = () => {
   );
 };
 
+BooksList.propTypes = {
+  books: PropTypes.arrayOf(PropTypes.object).isRequired,
+  removeBook: PropTypes.func.isRequired,
+};
+
 const mapStateToProps = (state) => ({ books: state.bookReducer.books });
 
 export default connect(mapStateToProps, null)(BooksList);

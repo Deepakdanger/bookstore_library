@@ -10,6 +10,7 @@ const initialState = {
 const bookReducer = (state = initialState, action) => {
   switch (action.type) {
     case CREATE_BOOK:
+      console.log(state, action.payload);
       return { ...state, newBook: action.payload };
     case REMOVE_BOOK:
       return state.filter((book) => book.bookId !== action.payload.bookId);
