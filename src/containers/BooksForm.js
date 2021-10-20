@@ -1,7 +1,7 @@
 import React from 'react';
 import Select from 'react-select';
 
-function BooksForm() {
+const BooksForm = () => {
   const options = [
     { value: 'action', label: 'Action' },
     { value: 'biography', label: 'Biography' },
@@ -20,6 +20,6 @@ function BooksForm() {
       </form>
     </div>
   );
-}
+};
 
 export default BooksForm;

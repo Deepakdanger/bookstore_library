@@ -8,7 +8,7 @@ const book = {
   category: 'Kids',
 };
 
-function BooksList() {
+const BooksList = () => {
   const printBook = Book(book);
   return (
     <div className="booklist">
@@ -26,7 +26,7 @@ function BooksList() {
       </table>
     </div>
   );
-}
+};
 
 const mapStateToProps = (state) => ({ books: state.bookReducer.books });
 
