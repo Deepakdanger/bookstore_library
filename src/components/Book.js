@@ -16,6 +16,9 @@ const Book = ({ book }) => {
       <td className="displaybook_category">
         {category}
       </td>
+      <td className="displaybook_remove">
+        remove
+      </td>
     </tr>
   );
 };
