@@ -25,10 +25,13 @@ const BooksForm = ({ createBook }) => {
     setState((prevState) => ({ state: { ...prevState.state, category: e.value } }));
   };
 
+  const bookiD = Math.random().toString();
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(bookiD);
     createBook({
-      bookiD: Math.random().toString(),
+      bookiD,
       title: state.state.title,
       category: state.state.category,
     });

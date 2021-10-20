@@ -2,9 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Book = ({ book, removeBook }) => {
-  console.log(book);
   const { bookId, title, category } = book;
-  console.log(bookId, title);
   return (
     <tr className="displaybook">
       <td className="displaybook_id">
