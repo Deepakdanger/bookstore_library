@@ -18,11 +18,11 @@ const BooksForm = ({ createBook }) => {
   ];
 
   const handleNameChange = (e) => {
-    setState((prevState) => ({ state: { ...prevState.state, title: e.target.value } }));
+    setState({ ...state, title: e.target.value });
   };
 
   const handleCategoryChange = (e) => {
-    setState((prevState) => ({ state: { ...prevState.state, category: e.value } }));
+    setState({ ...state, category: e.value });
   };
 
   const bookiD = Math.random().toString();
@@ -31,8 +31,8 @@ const BooksForm = ({ createBook }) => {
     e.preventDefault();
     createBook({
       bookiD,
-      title: state.state.title,
-      category: state.state.category,
+      title: state.title,
+      category: state.category,
     });
     setState({ title: '', categoty: '' });
   };
@@ -40,7 +40,7 @@ const BooksForm = ({ createBook }) => {
   return (
     <div className="booklist">
       <form onSubmit={(e) => handleSubmit(e)}>
-        <input type="text" id="title" onChange={(e) => handleNameChange(e)} />
+        <input type="text" id="title" placeholder="title" value={state.title} onChange={(e) => handleNameChange(e)} />
         <Select options={options} onChange={(e) => handleCategoryChange(e)} />
         <button type="submit">Submit</button>
       </form>
