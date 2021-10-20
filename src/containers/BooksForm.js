@@ -29,7 +29,6 @@ const BooksForm = ({ createBook }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(bookiD);
     createBook({
       bookiD,
       title: state.state.title,

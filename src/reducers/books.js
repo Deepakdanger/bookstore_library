@@ -3,7 +3,6 @@ import { CREATE_BOOK, REMOVE_BOOK } from '../actions/index';
 const bookReducer = (state = [], action) => {
   switch (action.type) {
     case CREATE_BOOK:
-      console.log(action.book);
       return [
         ...state,
         {

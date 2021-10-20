@@ -5,7 +5,6 @@ import Book from '../components/Book';
 import { removeBookAction } from '../actions';
 
 const BooksList = ({ books, removeBook }) => {
-  console.log(books);
   const handleRemoveBook = (book) => removeBook(book);
   const printBook = books.map((book) => (<Book key={`book-${book.bookId}`} book={book} removeBook={() => handleRemoveBook(book)} />));
   return (
