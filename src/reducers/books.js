@@ -1,19 +1,19 @@
 import { CREATE_BOOK, REMOVE_BOOK } from '../actions/index';
 
-const initialState = {
-  book: [
-    { bookId: Math.random(), title: 'far from here', category: 'Kids' },
-    { bookId: Math.random(), title: 'Earth is small', category: 'Kids' },
-  ],
-};
-
-const bookReducer = (state = initialState, action) => {
+const bookReducer = (state = [], action) => {
   switch (action.type) {
     case CREATE_BOOK:
       console.log(state, action.payload);
-      return { ...state, newBook: action.payload };
+      return [
+        ...state,
+        {
+          bookId: action.book.bookId,
+          title: action.book.title,
+          category: action.book.category,
+        },
+      ];
     case REMOVE_BOOK:
-      return state.filter((book) => book.bookId !== action.payload.bookId);
+      return state.filter((book) => book.bookId !== action.book.bookId);
     default:
       return state;
   }

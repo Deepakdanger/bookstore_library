@@ -28,7 +28,7 @@ const BooksForm = ({ createBook }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     createBook({
-      bookiD: Math.random(),
+      bookiD: Math.random().toString(),
       title: state.state.title,
       category: state.state.category,
     });
@@ -38,7 +38,7 @@ const BooksForm = ({ createBook }) => {
   return (
     <div className="booklist">
       <form onSubmit={(e) => handleSubmit(e)}>
-        <input type="text" id="title" value={state.title} onChange={(e) => handleNameChange(e)} />
+        <input type="text" id="title" onChange={(e) => handleNameChange(e)} />
         <Select options={options} onChange={(e) => handleCategoryChange(e)} />
         <button type="submit">Submit</button>
       </form>

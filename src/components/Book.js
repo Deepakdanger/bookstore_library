@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Book = (books) => {
-  const { bookId, title, category } = books;
+const Book = ({ book }) => {
+  console.log(book);
+  const { bookId, title, category } = book;
+  console.log(bookId, title);
   return (
     <tr className="displaybook">
       <td className="displaybook_id">
@@ -19,7 +21,7 @@ const Book = (books) => {
 };
 
 Book.propTypes = {
-  books: PropTypes.shape({
+  book: PropTypes.shape({
     bookId: PropTypes.string,
     title: PropTypes.string,
     category: PropTypes.string,
@@ -28,7 +30,7 @@ Book.propTypes = {
 };
 
 Book.defaultProps = {
-  books: PropTypes.shape({
+  book: PropTypes.shape({
     bookId: '1',
     title: 'fhfh',
     category: 'si-fi',
