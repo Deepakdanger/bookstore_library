@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Book = (books) => {
-  const { bookId, title, category } = books;
+const Book = ({ book, removeBook }) => {
+  const { bookId, title, category } = book;
   return (
     <tr className="displaybook">
       <td className="displaybook_id">
@@ -14,21 +14,24 @@ const Book = (books) => {
       <td className="displaybook_category">
         {category}
       </td>
+      <td className="displaybook_remove">
+        <button type="button" onClick={removeBook}>Remove</button>
+      </td>
     </tr>
   );
 };
 
 Book.propTypes = {
-  books: PropTypes.shape({
+  book: PropTypes.shape({
     bookId: PropTypes.string,
     title: PropTypes.string,
     category: PropTypes.string,
   }),
-
+  removeBook: PropTypes.func.isRequired,
 };
 
 Book.defaultProps = {
-  books: PropTypes.shape({
+  book: PropTypes.shape({
     bookId: '1',
     title: 'fhfh',
     category: 'si-fi',
