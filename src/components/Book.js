@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Book(books) {
+const Book = (books) => {
   const { bookId, title, category } = books;
   return (
     <tr className="displaybook">
@@ -16,7 +16,7 @@ function Book(books) {
       </td>
     </tr>
   );
-}
+};
 
 Book.propTypes = {
   books: PropTypes.shape({
