@@ -6,16 +6,16 @@ import { removeBookAction, filterBookAction } from '../actions';
 import CategoryFilter from '../components/CategoryFilter';
 
 const BooksList = ({
-  books, removeBook, selectBook,
+  books, removeBook, selectBook, filter,
 }) => {
   const handleRemoveBook = (book) => removeBook(book);
   const categorySelect = (e) => {
     selectBook(e.value);
   };
 
+  const filteredBook = filter === 'All' ? books : books.filter((book) => book.category === filter);
 
-
-  const printBook = books.map((book) => (<Book key={`book-${book.bookId}`} book={book} removeBook={() => handleRemoveBook(book)} />));
+  const printBook = filteredBook.map((book) => (<Book key={`book-${book.bookId}`} book={book} removeBook={() => handleRemoveBook(book)} />));
 
   return (
     <div className="booklist">
@@ -46,10 +46,12 @@ BooksList.propTypes = {
 
 const mapStateToProps = (state) => ({
   books: state.books,
+  filter: state.filter,
 });
 
 const mapDispatchToProps = (dispatch) => ({
   removeBook: (book) => dispatch(removeBookAction(book)),
+  selectBook: (filter) => dispatch(filterBookAction(filter)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(BooksList);
