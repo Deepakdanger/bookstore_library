@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Select from 'react-select';
 
-const categoryFilter = ({ categorySelect }) => {
+const CategoryFilter = ({ categorySelect }) => {
   const options = [
     { value: 'All', label: 'All' },
     { value: 'action', label: 'Action' },
@@ -16,13 +16,13 @@ const categoryFilter = ({ categorySelect }) => {
 
   return (
     <div>
-      <Select options={options} value="All" onChange={(e) => categorySelect(e)} required />
+      <Select options={options} onChange={(e) => categorySelect(e)} required />
     </div>
   );
 };
 
-categoryFilter.propTypes = {
+CategoryFilter.propTypes = {
   categorySelect: PropTypes.func.isRequired,
 };
 
-export default categoryFilter;
+export default CategoryFilter;
