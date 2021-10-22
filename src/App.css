@@ -53,12 +53,157 @@ nav {
 }
 
 .Lesson-Panel {
-    width: 75rem;
-    height: 10.625rem;
-    margin: 2.313rem 6.25rem 0;
+    width: 61rem;
+    height: 7rem;
+    margin: 2rem 6.25rem 0;
     padding: 2rem 9.188rem 1.625rem 1.688rem;
     border-radius: 4px;
     border: solid 1px var(--white);
     background-color: #fff;
     display: flex;
+    border: solid 1px black;
+  }
+
+.category1 {
+    width: 3.063rem;
+  height: 1.125rem;
+  margin: 0 2.438rem 0 0;
+  opacity: 0.5;
+  font-family: Montserrat;
+  font-size: 0.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.title1 {
+    width: 12.313rem;
+  height: 1.813rem;
+  margin: 0.188rem 20.188rem 0 0;
+  font-family: RobotoSlab;
+  font-size: 1.375rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: #121212;
+}
+
+.last1 {
+  margin-top: 2rem;
+}
+
+.author1 {
+    width: 6.688rem;
+  height: 1.188rem;
+  margin: 0.25rem 0 0;
+  font-family: RobotoSlab;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.remove1 {
+    width: 4.563rem;
+  height: 1.188rem;
+  margin: 0.188rem 0.938rem 0.125rem 0;
+  font-family: RobotoSlab;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.button1 {
+  border: none;
+  background-color: white;
+}
+.comment1 {
+  border-right: darkgray 2px solid;
+  padding-right: 1rem;
+}
+
+.edit1 {
+    border-left: darkgray 2px solid;
+    padding-left: 1rem;
+  }
+
+  .rectangle2 {
+    width: 5.625rem;
+  height: 5.62rem;
+  padding: 0.62rem 0.625rem 0.75rem 0.75rem;
+  }
+
+  .oval2 {
+    width: 4.25rem;
+    height: 4.25rem;
+    border-style: solid;
+    border-width: 5px;
+    border-image-source: linear-gradient(to bottom, var(--medium-blue), var(--dodger-blue));
+    border-image-slice: 1;
+  }
+
+  .book-row-middle {
+    display: flex;
+  }
+  
+.oval {
+    width: 68px;
+    height: 68px;
+    margin-right: 15px;
+    border-radius: 50%;
+    background-color: #2ea3ff;
+    position: relative;  
+    &::after {
+      display: block;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      height: 48px;
+      width: 48px;
+      line-height: 48px;
+      border-radius: 50%;
+      background-color: var(--secondary-color);
+      font-size: 1.4em;
+      text-align: center;
+    }
+  
+    @for $counter from 1 through 50 {
+      &.oval-#{$counter} {
+        &::after {
+          content: "#{$counter}%";
+        }
+      }
+    }
+  
+    @for $counter from 51 through 100 {
+      &.oval-#{$counter} {
+        background-image:
+          linear-gradient(90deg, transparent 50%, #2ea3ff 50%),
+          linear-gradient(-90deg+(360*0.01*($counter - 50)), transparent 50%, #e8e8e8 50%);
+  
+        &::after {
+          content: "";
+        }
+      }
+    }
+  }
+  
+  .oval-number {
+    font-size: 28px;
+  }
+  
+  .oval-text {
+    font-size: 14px;
   }
