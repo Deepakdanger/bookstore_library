@@ -5,13 +5,13 @@ import Select from 'react-select';
 const CategoryFilter = ({ categorySelect }) => {
   const options = [
     { value: 'All', label: 'All' },
-    { value: 'action', label: 'Action' },
-    { value: 'biography', label: 'Biography' },
-    { value: 'history', label: 'History' },
-    { value: 'horror', label: 'Horror' },
-    { value: 'kids', label: 'Kids' },
-    { value: 'learning', label: 'Learning' },
-    { value: 'sci-fi', label: 'Sci-Fi' },
+    { value: 'Action', label: 'Action' },
+    { value: 'Biography', label: 'Biography' },
+    { value: 'History', label: 'History' },
+    { value: 'Horror', label: 'Horror' },
+    { value: 'Kids', label: 'Kids' },
+    { value: 'Learning', label: 'Learning' },
+    { value: 'Sci-Fi', label: 'Sci-Fi' },
   ];
 
   return (
