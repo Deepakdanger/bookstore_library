@@ -18,21 +18,15 @@ const BooksList = ({
   const printBook = filteredBook.map((book) => (<Book key={`book-${book.bookId}`} book={book} removeBook={() => handleRemoveBook(book)} />));
 
   return (
-    <div className="booklist">
-      <CategoryFilter categorySelect={categorySelect} />
-      <table className="booklist-table">
-        <thead>
-          <tr className="booklist-row">
-            <th className="booklist-header">ID</th>
-            <th className="booklist-title">Title Of Book</th>
-            <th className="booklist-category">Category Of Book</th>
-            <th className="booklist-remove">Remove</th>
-          </tr>
-        </thead>
-        <tbody>
-          {printBook}
-        </tbody>
-      </table>
+    <div>
+      <nav className="nav">
+        <p className="book_topic">Bookstore-Library</p>
+        <p className="book_topic1">Books</p>
+        <p className="book_category"><CategoryFilter categorySelect={categorySelect} /></p>
+      </nav>
+      <div className="booklist">
+        {printBook}
+      </div>
     </div>
   );
 };
