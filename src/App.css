@@ -1,26 +1,23 @@
-/* css */
-nav {
-  
+nav { 
   display: flex;
   height: 6rem;
   height: 100%;
- background-color: rgb(255, 255, 255);
- border-bottom: rgb(146, 141, 143) 2px solid;
+  background-color: rgb(255, 255, 255);
+  border-bottom: rgb(146, 141, 143) 2px solid;
 }
 
 .book_topic {
-    width: 18rem;
-    height: 2.313rem;
-    margin-left: 5rem;
-
-    font-family: Montserrat;
-    font-size: 1.875rem;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #0290ff;
+  width: 18rem;
+  height: 2.313rem;
+  margin-left: 5rem;
+  font-family: Montserrat;
+  font-size: 1.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #0290ff;
 }
 
 .book_topic1 {
@@ -71,16 +68,16 @@ nav {
 }
 
 .Lesson-Panel {
-    width: 61rem;
-    height: 8.23rem;
-    margin: 1rem 6.25rem 0;
-    padding: 2rem 9.188rem 1.625rem 1.688rem;
-    border-radius: 4px;
-    border: solid 1px var(--white);
-    background-color: #fff;
-    display: flex;
-    border: solid 1px black;
-  }
+  width: 61rem;
+  height: 8.23rem;
+  margin: 1rem 6.25rem 0;
+  padding: 2rem 9.188rem 1.625rem 1.688rem;
+  border-radius: 4px;
+  border: solid 1px var(--white);
+  background-color: #fff;
+  display: flex;
+  border: solid 1px black;
+}
 
 .category1 {
   width: 3.063rem;
@@ -98,7 +95,7 @@ nav {
 }
 
 .title1 {
-    width: 12.313rem;
+  width: 12.313rem;
   height: 1.813rem;
   margin: 0.188rem 20.188rem 0 0;
   font-family: RobotoSlab;
@@ -116,7 +113,7 @@ nav {
 }
 
 .author1 {
-    width: 6.688rem;
+  width: 6.688rem;
   height: 1.188rem;
   margin: 0.25rem 0 0;
   font-family: RobotoSlab;
@@ -130,7 +127,7 @@ nav {
 }
 
 .remove1 {
-    width: 4.563rem;
+  width: 4.563rem;
   height: 1.188rem;
   margin: 0.188rem 0.938rem 0.125rem 0;
   font-family: RobotoSlab;
@@ -153,137 +150,137 @@ nav {
 }
 
 .edit1 {
-    border-left: darkgray 2px solid;
-    padding-left: 1rem;
+  border-left: darkgray 2px solid;
+  padding-left: 1rem;
   }
 
-  .rectangle2 {
-    width: 5.625rem;
+.rectangle2 {
+  width: 5.625rem;
   height: 5.62rem;
   padding: 0.62rem 0.625rem 0.75rem 0.75rem;
-  }
+}
 
-  .oval2 {
-    width: 4.25rem;
-    height: 4.25rem;
-    border-style: solid;
-    border-width: 5px;
-    border-image-source: linear-gradient(to bottom, var(--medium-blue), var(--dodger-blue));
-    border-image-slice: 1;
-  }
+.oval2 {
+  width: 4.25rem;
+  height: 4.25rem;
+  border-style: solid;
+  border-width: 5px;
+  border-image-source: linear-gradient(to bottom, var(--medium-blue), var(--dodger-blue));
+  border-image-slice: 1;
+}
 
-  .book-progress {
-    display: flex;
-    border-right: 0.1px solid silver;
-    padding-right: 1rem;
-  }
+.book-progress {
+  display: flex;
+  border-right: 0.1px solid silver;
+  padding-right: 1rem;
+}
 
-  .circular {
-    height: 100px;
-    width: 100px;
-    position: relative;
-    transform: scale(1);
-  }
+.circular {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  transform: scale(1);
+}
   
-  .circular .inner {
-    position: absolute;
-    z-index: 6;
-    top: 50%;
-    left: 50%;
-    height: 80px;
-    width: 80px;
-    margin: -40px 0 0 -40px;
-    background: #fff;
-    border-radius: 100%;
-  }
+.circular .inner {
+  position: absolute;
+  z-index: 6;
+  top: 50%;
+  left: 50%;
+  height: 80px;
+  width: 80px;
+  margin: -40px 0 0 -40px;
+  background: #fff;
+  border-radius: 100%;
+}
   
-  .circular .number {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
-    font-size: 18px;
-    font-weight: 500;
-    color: #0290ff;
-  }
+.circular .number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  font-size: 18px;
+  font-weight: 500;
+  color: #0290ff;
+}
+ 
+.circular .bar {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  border-radius: 100%;
+  clip: rect(0, 100px, 100px, 50px);
+}
   
-  .circular .bar {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background: #fff;
-    border-radius: 100%;
-    clip: rect(0, 100px, 100px, 50px);
-  }
+.circle .bar .progress {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  clip: rect(0, 50px, 100px, 0);
+  background: #0290ff;
+}
   
-  .circle .bar .progress {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    border-radius: 100%;
-    clip: rect(0, 50px, 100px, 0);
-    background: #0290ff;
-  }
-  
-  .circle .left .progress {
-    z-index: 1;
-    animation: left 4s linear both;
-  }
-  
-  @keyframes left {
-    100% {
-      transform: rotate(180deg);
-    }
-  }
-  
-  .circle .right {
+.circle .left .progress {
+  z-index: 1;
+  animation: left 4s linear both;
+}
+
+@keyframes left {
+  100% {
     transform: rotate(180deg);
-    z-index: 3;
   }
-  
-  .circle .right .progress {
-    animation: right 4s linear both;
-    animation-delay: 4s;
-  }
-  
-  @keyframes right {
-    100% {
-      transform: rotate(90deg);
-    }
-  }
+}
 
-  .Percent-Complete {
-    width: 2.938rem;
-    height: 2.438rem;
-    margin: 0.063rem 7.063rem 0 0.688rem;
-    font-family: 'Montserrat Bold', sans-serif;
-    font-size: 2rem;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #121212;
-  }
-  
-  .Completed {
-    width: 5rem;
-    height: 1.125rem;
-    margin: 0.438rem 4.938rem 0.75rem 0.75rem;
-    opacity: 0.5;
-    font-family: 'Montserrat Bold', sans-serif;
-    font-size: 0.875rem;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #121212;
-  }
+.circle .right {
+  transform: rotate(180deg);
+  z-index: 3;
+}
 
-  .current3 {
-    width: 7.875rem;
+.circle .right .progress {
+  animation: right 4s linear both;
+  animation-delay: 4s;
+}
+
+@keyframes right {
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+.Percent-Complete {
+  width: 2.938rem;
+  height: 2.438rem;
+  margin: 0.063rem 7.063rem 0 0.688rem;
+  font-family: 'Montserrat Bold', sans-serif;
+  font-size: 2rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.Completed {
+  width: 5rem;
+  height: 1.125rem;
+  margin: 0.438rem 4.938rem 0.75rem 0.75rem;
+  opacity: 0.5;
+  font-family: 'Montserrat Bold', sans-serif;
+  font-size: 0.875rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.current3 {
+  width: 7.875rem;
   height: 1.125rem;
   margin: 0.063rem 3.625rem 0 3.688rem;
   opacity: 0.5;
@@ -295,10 +292,10 @@ nav {
   line-height: normal;
   letter-spacing: normal;
   color: #121212;
-  }
+}
 
-  .chapter3 {
-    width: 4.688rem;
+.chapter3 {
+  width: 4.688rem;
   height: 1.313rem;
   margin: 0.438rem 6.813rem 0.25rem 3.688rem;
   font-family: RobotoSlab;
@@ -309,10 +306,10 @@ nav {
   line-height: normal;
   letter-spacing: -0.4px;
   color: #121212;
-  }
+}
 
-  .update3 {
-    width: 11.5rem;
+.update3 {
+  width: 11.5rem;
   height: 2.063rem;
   margin: 0.75rem 0 0.563rem 3.688rem;
   padding: 0.438rem 1.188rem 0.5rem 1.375rem;
@@ -328,59 +325,59 @@ nav {
   letter-spacing: 0.5px;
   text-align: center;
   color: #fff;
-  }
+}
 
-  .booklist1 {
-    border-top: solid 2px grey;
-    width: 72rem;
+.booklist1 {
+  border-top: solid 2px grey;
+  width: 72rem;
   height: auto;
   margin: 2rem 6.25rem 6rem;
-  }
-  
-  .book_new {
-    width: 10.875rem;
-    height: 1.5rem;
-    margin: 1.813rem 32.75rem 1.188rem 0;
-    font-family: Montserrat;
-    font-size: 1.25rem;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: -0.18px;
-    color: #888;
-  }
+}
 
-  form {
-    display: flex;
-    width: 100%;
-  }
+.book_new {
+  width: 10.875rem;
+  height: 1.5rem;
+  margin: 1.813rem 32.75rem 1.188rem 0;
+  font-family: Montserrat;
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888;
+}
 
-  .input_book1 {
-    width: 46rem;
+form {
+  display: flex;
+  width: 100%;
+}
+
+.input_book1 {
+  width: 46rem;
   height: 2.213rem;
   margin: 1.588rem 2.125rem 0 0;
   border-radius: 4px;
   border: solid 1px grey;
   background-color: #fff;
-  }
+}
 
-  .input_category {
-    width: 17.813rem;
+.input_category {
+  width: 17.813rem;
   height: 2.813rem;
   margin: 1.188rem 2.125rem 0;
   padding: 0.375rem 0.938rem 0.563rem 1rem;
   border-radius: 4px;
   border: solid 1px var(--white);
   background-color: #fff;
-  }
+}
 
-  .add_book {
-    width: 11.5rem;
+.add_book {
+  width: 11.5rem;
   height: 2.813rem;
   margin: 1.188rem 0 0 2.125rem;
   padding: 0.801rem 1.188rem 0.886rem 1.375rem;
   border-radius: 3px;
   border: none;
   background-color: #0290ff;
-  }
+}
