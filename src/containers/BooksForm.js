@@ -38,11 +38,12 @@ const BooksForm = ({ createBook }) => {
   };
 
   return (
-    <div className="booklist">
+    <div className="booklist1">
+      <div className="book_new"> ADD NEW BOOK </div>
       <form onSubmit={(e) => handleSubmit(e)}>
-        <input type="text" id="title" placeholder="title" value={state.title} onChange={(e) => handleNameChange(e)} />
-        <Select options={options} onChange={(e) => handleCategoryChange(e)} />
-        <button type="submit">Submit</button>
+        <input className="input_book1" type="text" id="title" placeholder="Book Title" value={state.title} onChange={(e) => handleNameChange(e)} />
+        <Select className="input_category" placeholder="Category" options={options} onChange={(e) => handleCategoryChange(e)} />
+        <button className="add_book" type="submit">Submit</button>
       </form>
     </div>
   );

@@ -4,7 +4,8 @@ nav {
   display: flex;
   height: 6rem;
   height: 100%;
-  border: blue 2px brown solid;
+ background-color: rgb(255, 255, 255);
+ border-bottom: rgb(146, 141, 143) 2px solid;
 }
 
 .book_topic {
@@ -40,7 +41,6 @@ nav {
 .book_category {
   width: 8rem;
   height: 1rem;
-  opacity: 0.5;
   font-family: Montserrat;
   font-size: 0.813rem;
   font-weight: normal;
@@ -48,14 +48,32 @@ nav {
   font-style: normal;
   line-height: normal;
   letter-spacing: 1.9px;
-  color: #121212;
+  color: #000000;
   margin-top: 2rem;
+  z-index: 100;
+  background-color: rgb(255, 255, 255);
+}
+
+.Oval {
+  width: 1.75rem;
+  height: 1.75rem;
+  margin: 1.56rem 0 0 36.5rem;
+  padding: 0.875rem;
+  border: solid 1px rgb(108, 109, 122);
+  border-radius: 80%;
+}
+
+.Mask {
+  width: 1.363rem;
+  height: 1.363rem;
+  color: #0290ff;
+  margin-left: 0.21rem;
 }
 
 .Lesson-Panel {
     width: 61rem;
-    height: 7rem;
-    margin: 2rem 6.25rem 0;
+    height: 8.23rem;
+    margin: 1rem 6.25rem 0;
     padding: 2rem 9.188rem 1.625rem 1.688rem;
     border-radius: 4px;
     border: solid 1px var(--white);
@@ -65,7 +83,7 @@ nav {
   }
 
 .category1 {
-    width: 3.063rem;
+  width: 3.063rem;
   height: 1.125rem;
   margin: 0 2.438rem 0 0;
   opacity: 0.5;
@@ -102,7 +120,7 @@ nav {
   height: 1.188rem;
   margin: 0.25rem 0 0;
   font-family: RobotoSlab;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 300;
   font-stretch: normal;
   font-style: normal;
@@ -116,7 +134,7 @@ nav {
   height: 1.188rem;
   margin: 0.188rem 0.938rem 0.125rem 0;
   font-family: RobotoSlab;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 300;
   font-stretch: normal;
   font-style: normal;
@@ -154,56 +172,161 @@ nav {
     border-image-slice: 1;
   }
 
-  .book-row-middle {
+  .book-progress {
     display: flex;
+    border-right: 0.1px solid silver;
+    padding-right: 1rem;
+  }
+
+  .circular {
+    height: 100px;
+    width: 100px;
+    position: relative;
+    transform: scale(1);
   }
   
-.oval {
-    width: 68px;
-    height: 68px;
-    margin-right: 15px;
-    border-radius: 50%;
-    background-color: #2ea3ff;
-    position: relative;  
-    &::after {
-      display: block;
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      height: 48px;
-      width: 48px;
-      line-height: 48px;
-      border-radius: 50%;
-      background-color: var(--secondary-color);
-      font-size: 1.4em;
-      text-align: center;
+  .circular .inner {
+    position: absolute;
+    z-index: 6;
+    top: 50%;
+    left: 50%;
+    height: 80px;
+    width: 80px;
+    margin: -40px 0 0 -40px;
+    background: #fff;
+    border-radius: 100%;
+  }
+  
+  .circular .number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    font-size: 18px;
+    font-weight: 500;
+    color: #0290ff;
+  }
+  
+  .circular .bar {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    border-radius: 100%;
+    clip: rect(0, 100px, 100px, 50px);
+  }
+  
+  .circle .bar .progress {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+    clip: rect(0, 50px, 100px, 0);
+    background: #0290ff;
+  }
+  
+  .circle .left .progress {
+    z-index: 1;
+    animation: left 4s linear both;
+  }
+  
+  @keyframes left {
+    100% {
+      transform: rotate(180deg);
     }
+  }
   
-    @for $counter from 1 through 50 {
-      &.oval-#{$counter} {
-        &::after {
-          content: "#{$counter}%";
-        }
-      }
-    }
+  .circle .right {
+    transform: rotate(180deg);
+    z-index: 3;
+  }
   
-    @for $counter from 51 through 100 {
-      &.oval-#{$counter} {
-        background-image:
-          linear-gradient(90deg, transparent 50%, #2ea3ff 50%),
-          linear-gradient(-90deg+(360*0.01*($counter - 50)), transparent 50%, #e8e8e8 50%);
+  .circle .right .progress {
+    animation: right 4s linear both;
+    animation-delay: 4s;
+  }
   
-        &::after {
-          content: "";
-        }
-      }
+  @keyframes right {
+    100% {
+      transform: rotate(90deg);
     }
   }
-  
-  .oval-number {
-    font-size: 28px;
+
+  .Percent-Complete {
+    width: 2.938rem;
+    height: 2.438rem;
+    margin: 0.063rem 7.063rem 0 0.688rem;
+    font-family: 'Montserrat Bold', sans-serif;
+    font-size: 2rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #121212;
   }
   
-  .oval-text {
-    font-size: 14px;
+  .Completed {
+    width: 5rem;
+    height: 1.125rem;
+    margin: 0.438rem 4.938rem 0.75rem 0.75rem;
+    opacity: 0.5;
+    font-family: 'Montserrat Bold', sans-serif;
+    font-size: 0.875rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #121212;
   }
+
+  .current3 {
+    width: 7.875rem;
+  height: 1.125rem;
+  margin: 0.063rem 3.625rem 0 3.688rem;
+  opacity: 0.5;
+  font-family: RobotoSlab;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+  }
+
+  .chapter3 {
+    width: 4.688rem;
+  height: 1.313rem;
+  margin: 0.438rem 6.813rem 0.25rem 3.688rem;
+  font-family: RobotoSlab;
+  font-size: 1rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: #121212;
+  }
+
+  .update3 {
+    width: 11.5rem;
+  height: 2.063rem;
+  margin: 0.75rem 0 0.563rem 3.688rem;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  border-radius: 3px;  
+  border: none;
+  background-color: #0290ff;
+  font-family: RobotoSlab;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
+  }
+

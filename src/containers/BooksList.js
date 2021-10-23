@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { FaUser } from 'react-icons/fa';
 import Book from '../components/Book';
 import { removeBookAction, filterBookAction } from '../actions';
 import CategoryFilter from '../components/CategoryFilter';
@@ -23,6 +24,9 @@ const BooksList = ({
         <p className="book_topic">Bookstore-Library</p>
         <p className="book_topic1">Books</p>
         <p className="book_category"><CategoryFilter categorySelect={categorySelect} /></p>
+        <div className="Oval">
+          <FaUser className="Mask" />
+        </div>
       </nav>
       <div className="booklist">
         {printBook}

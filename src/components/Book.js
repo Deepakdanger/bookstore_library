@@ -25,15 +25,27 @@ const Book = ({ book, removeBook }) => {
           <span className="remove1 edit1">Edit</span>
         </div>
       </div>
-      <div className="book-row-middle">
-        <div className="oval oval-64" />
+      <div className="book-progress">
+        <div className="circular">
+          <div className="inner" />
+          <div className="circle">
+            <div className="bar left">
+              <div className="progress" />
+            </div>
+            <div className="bar right">
+              <div className="progress" />
+            </div>
+          </div>
+        </div>
         <div>
-          <p className="oval-number">64%</p>
-          <p className="oval-text">Completed</p>
+          <p className="Percent-Complete">75%</p>
+          <p className="Completed">Completed</p>
         </div>
       </div>
       <div className="number3">
-        why
+        <p className="current3"> CURRENT CHAPTER</p>
+        <p className="chapter3">Chapter 9</p>
+        <button className="update3" type="button">UPDATE PROGRESS</button>
       </div>
     </div>
   );
