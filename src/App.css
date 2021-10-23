@@ -330,3 +330,57 @@ nav {
   color: #fff;
   }
 
+  .booklist1 {
+    border-top: solid 2px grey;
+    width: 72rem;
+  height: auto;
+  margin: 2rem 6.25rem 6rem;
+  }
+  
+  .book_new {
+    width: 10.875rem;
+    height: 1.5rem;
+    margin: 1.813rem 32.75rem 1.188rem 0;
+    font-family: Montserrat;
+    font-size: 1.25rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.18px;
+    color: #888;
+  }
+
+  form {
+    display: flex;
+    width: 100%;
+  }
+
+  .input_book1 {
+    width: 46rem;
+  height: 2.213rem;
+  margin: 1.588rem 2.125rem 0 0;
+  border-radius: 4px;
+  border: solid 1px grey;
+  background-color: #fff;
+  }
+
+  .input_category {
+    width: 17.813rem;
+  height: 2.813rem;
+  margin: 1.188rem 2.125rem 0;
+  padding: 0.375rem 0.938rem 0.563rem 1rem;
+  border-radius: 4px;
+  border: solid 1px var(--white);
+  background-color: #fff;
+  }
+
+  .add_book {
+    width: 11.5rem;
+  height: 2.813rem;
+  margin: 1.188rem 0 0 2.125rem;
+  padding: 0.801rem 1.188rem 0.886rem 1.375rem;
+  border-radius: 3px;
+  border: none;
+  background-color: #0290ff;
+  }
