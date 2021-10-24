@@ -16,8 +16,7 @@ const CategoryFilter = ({ categorySelect }) => {
 
   return (
     <div>
-      <p> Select Category </p>
-      <Select options={options} onChange={(e) => categorySelect(e)} required />
+      <Select options={options} placeholder="Categories" onChange={(e) => categorySelect(e)} required />
     </div>
   );
 };
